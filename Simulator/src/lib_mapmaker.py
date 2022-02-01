@@ -95,6 +95,21 @@ def write_txt3f(fname,array1,array2,array3):
     f.close()                          
 #######################################################################################################
 #######################################################################################################
+# wrap pointing angle within theta 0-180 and phi 0-360
+#   input: theta and phi in [rad]
+#   output: properly wrapped theta (0-180) and phi (0-360) in [rad]
+#def wrap_ptg(theta,phi):
+#
+#    ind = np.where(theta > np.pi)
+#    if len(ind[0]) != 0: phi[ind[0]] -= 2.*np.pi
+#
+#    ind = np.where(phi > 2.*np.pi)
+#    if len(ind[0]) != 0: phi[ind[0]] -= 2.*np.pi
+#    ind = np.where(phi < 2.*np.pi)
+#    if len(ind[0]) != 0: phi[ind[0]] += 2.*np.pi
+#    return theta, phi
+#######################################################################################################
+#######################################################################################################
 # read the bandpass mismatch alpha_d and alpha_s
 #   input: filename
 #   output: output det_id, alpha_d, alpha_s
@@ -1084,7 +1099,7 @@ def boreptg2pixptg(i_pix,pix_list,pointing_package,fpdb_list,time0,option_silent
 def boreptg2pixptg_inC(i_pix,pix_list,pointing_package,fpdb_list,time0,option_silent):
     if option_silent==False: print ""
     if option_silent==False: print "=================================="
-    if option_silent==False: info("[BOREPTG2PIXPTG] START, pixel#="+str(i_pix), time0)
+    if option_silent==False: info("[boreptg2pixptg_inC] START, pixel#="+str(i_pix), time0)
 
     b_ra = pointing_package["glon"]
     b_dec = pointing_package["glat"]
@@ -1109,6 +1124,19 @@ def boreptg2pixptg_inC(i_pix,pix_list,pointing_package,fpdb_list,time0,option_si
         dec_psb = out[1]
         psi_ra = out[2]
 
+        #####################################################################
+        ## new addition in 2022-2-1 by TM
+        # clearly lib_c.boreptg2pixptg_c generates nan occationally, and thus
+        # this is to detect nan and replace with the neighbor array
+        ind = np.isnan(ra_psb)
+        ind2 = np.where( ind == True)
+        if len(ind2[0]) == 1: 
+            ra_psb[ind2[0]] = ra_psb[ind2[0]-1]
+            dec_psb[ind2[0]] = dec_psb[ind2[0]-1]
+            psi_ra[ind2[0]] = psi_ra[ind2[0]-1]
+        if len(ind2[0]) >1: print "[boreptg2pixptg_inC] WARNING! there are multiple nan in the pixel potnting"
+        #####################################################################
+
         if (i==0): top_ptg = {'glon': np.array(ra_psb), 'glat':np.array(dec_psb), 'psi':np.array(psi_ra)}
 #            ind_top = np.where(np.isnan(psi_ra)==True)
 #            num_top = len(psi_ra)
@@ -1118,7 +1146,7 @@ def boreptg2pixptg_inC(i_pix,pix_list,pointing_package,fpdb_list,time0,option_si
 #            num_bot = len(psi_ra)
 #            print 'bot', ind_bot[0], len(psi_ra)
 
-    if option_silent==False: print "[BOREPTG2PIXPTG] END, pixel#=", str(i_pix)
+    if option_silent==False: print "[boreptg2pixptg_inC] END, pixel#=", str(i_pix)
     if option_silent==False: print "=================================="
     return top_ptg, bot_ptg
 #######################################################################################################
@@ -1374,7 +1402,7 @@ def SignalGen(i_pix, pix_list, top_ptg, bot_ptg, hwpang, SimInputs, MuellerMatri
     bot_ra = bot_ptg['glon']
     bot_dec = pi/2. -  bot_ptg['glat']
     bot_psi = bot_ptg['psi']
-    
+
     bot_ipix = h.ang2pix(nside_in, bot_dec, bot_ra)
     bot_ipix = np.int_(bot_ipix)
     if option_TQU=="T":
