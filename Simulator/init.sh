@@ -62,6 +62,7 @@ if [[ $1 = "mkdir" ]];then
     mkdir -p ${dir_proj}/DB/fp_db
     mkdir -p ${dir_proj}/DB/gain_db
     mkdir -p ${dir_proj}/DB/obs_db
+    mkdir -p ${dir_proj}/DB/sys_db
     mkdir -p ${dir_proj}/mapin
     mkdir -p ${dir_proj}/clin
 
