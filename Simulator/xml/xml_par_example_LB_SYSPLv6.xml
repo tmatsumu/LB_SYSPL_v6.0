@@ -1,0 +1,58 @@
+<?xml version="1.0" encoding="UTF-8"?> 
+<Mapmaking> 
+  <log> 
+    <runID>example_LB_SYSPLv6</runID> 
+    <dir_simulator>/home/cmb/tmatsumu/LB_simulation/LB_SYSPL_v6.0/Simulator/</dir_simulator> 
+    <debug>regular</debug> 
+    <machine>kekcc</machine> 
+    <silent>Y</silent> 
+  </log> 
+  
+  <basicpar> 
+    <nside>512</nside> 
+    <run_type>sim</run_type> 
+    <coord>E2G</coord> 
+    <pixelmapio>N</pixelmapio> 
+    <gen_tod>N</gen_tod> 
+    <TQU>T_bandpassmismatch</TQU> 
+  </basicpar> 
+  
+  <simulations> 
+    <file_input_maps>/group/cmb/litebird/simdata/Maps/20131001_linux_711_LSM_new/processed_maps/140GHz/thermo/fits/cmb_map_band40_b32arcmin_ud512_thermo</file_input_maps> 
+    <file_input_map_dust>/group/cmb/litebird/simdata/Maps/20131001_linux_711_LSM_new/processed_maps/140GHz/thermo/fits/thermaldust_map_band40_b32arcmin_ud512_thermo</file_input_map_dust> 
+    <file_input_map_synch>/group/cmb/litebird/simdata/Maps/20131001_linux_711_LSM_new/processed_maps/140GHz/thermo/fits/synchrotron_map_band40_b32arcmin_ud512_thermo</file_input_map_synch> 
+    <file_input_bandpassmismatch>/group/cmb/litebird/usr/tmatsumu/LB_SYSPL_v6.0/DB//sys_db/222det_test_alpha_0.txt</file_input_bandpassmismatch> 
+    <file_input_noise>/group/cmb/litebird/usr/tmatsumu/LB_SYSPL_v6.0/DB/sim_nonoise.txt</file_input_noise> 
+    <file_input_fpdb>/group/cmb/litebird/usr/tmatsumu/LB_SYSPL_v6.0/DB//fp_db/LB_HFW_example_20160813.db</file_input_fpdb> 
+    <file_input_muellermatrix>/group/cmb/litebird/usr/tmatsumu/LB_SYSPL_v6.0/DB/pb1_MuellerMatrix_default.db</file_input_muellermatrix> 
+  </simulations> 
+  
+  <database> 
+    <file_fpdb_mmin>/group/cmb/litebird/usr/tmatsumu/LB_SYSPL_v6.0/DB//fp_db/LB_HFW_example_20160813.db</file_fpdb_mmin> 
+    <file_muellermatrix>/group/cmb/litebird/usr/tmatsumu/LB_SYSPL_v6.0/DB/pb1_MuellerMatrix_default.db</file_muellermatrix> 
+    <db_ces>/group/cmb/litebird/simdata/Scans/dataout/LB_L2_20220201_example01_samplerate_SCANSPEC_1440min_45.0degs_90.6min_50.0degs_0.1rpm_3day_nside256_1Hz/ptg/LBPTG_latlon_eclip.db</db_ces> 
+    <db_ces2>/group/cmb/litebird/simdata/Scans/dataout/LB_L2_20220201_example01_samplerate_SCANSPEC_1440min_45.0degs_90.6min_50.0degs_0.1rpm_3day_nside256_1Hz/ptg/LBPTG_latlon_eclip.db</db_ces2> 
+    <db_gain>/group/cmb/litebird/usr/tmatsumu/LB_SYSPL_v6.0/DB//gain_db/relgain_flat_bias_0.db</db_gain> 
+    <gain_type>ideal</gain_type> 
+    <gain_corr>ideal</gain_corr> 
+  </database> 
+  
+ <filtering_choice> 
+    <filter_choice>poly</filter_choice> 
+    <poly>-1</poly> 
+ </filtering_choice> 
+  
+  <output_file> 
+    <dir_simedmap>/group/cmb/litebird/usr/tmatsumu/LB_SYSPL_v6.0//SimedMaps/RunLog/example_LB_SYSPLv6</dir_simedmap> 
+    <dir_combinedmap>/group/cmb/litebird/usr/tmatsumu/LB_SYSPL_v6.0//SimedMaps/RunLog/example_LB_SYSPLv6</dir_combinedmap> 
+    <Tn_map>map_Tn.fits</Tn_map> 
+    <Td_map>map_Td.fits</Td_map> 
+    <AA_map>map_AA.fits</AA_map> 
+    <BB_map>map_BB.fits</BB_map> 
+    <AB_map>map_AB.fits</AB_map> 
+    <Ad_map>map_Ad.fits</Ad_map> 
+    <Bd_map>map_Bd.fits</Bd_map> 
+  </output_file> 
+  
+  
+</Mapmaking> 

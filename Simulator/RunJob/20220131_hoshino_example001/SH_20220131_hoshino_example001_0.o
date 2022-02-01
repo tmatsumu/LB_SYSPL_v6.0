@@ -1,0 +1,160 @@
+Sender: LSF System <lsfadmin@ccb138>
+Subject: Job 84960183: </home/cmb/tmatsumu/LB_simulation/LB_SYSPL_v6.0/Simulator//RunJob/20220131_hoshino_example001/SH_20220131_hoshino_example001_0.sh> in cluster <centralcluster> Done
+
+Job </home/cmb/tmatsumu/LB_simulation/LB_SYSPL_v6.0/Simulator//RunJob/20220131_hoshino_example001/SH_20220131_hoshino_example001_0.sh> was submitted from host <ccw05> by user <tmatsumu> in cluster <centralcluster> at Mon Jan 31 20:03:33 2022
+Job was executed on host(s) <ccb138>, in queue <s>, as user <tmatsumu> in cluster <centralcluster> at Mon Jan 31 20:03:34 2022
+</home/cmb/tmatsumu> was used as the home directory.
+</home/cmb/tmatsumu/LB_simulation/LB_SYSPL_v6.0/Simulator/gen_run> was used as the working directory.
+Started at Mon Jan 31 20:03:34 2022
+Terminated at Mon Jan 31 20:03:40 2022
+Results reported at Mon Jan 31 20:03:40 2022
+
+Your job looked like:
+
+------------------------------------------------------------
+# LSBATCH: User input
+/home/cmb/tmatsumu/LB_simulation/LB_SYSPL_v6.0/Simulator//RunJob/20220131_hoshino_example001/SH_20220131_hoshino_example001_0.sh
+------------------------------------------------------------
+
+Successfully completed.
+
+Resource usage summary:
+
+    CPU time :                                   4.22 sec.
+    Max Memory :                                 540 MB
+    Average Memory :                             298.00 MB
+    Total Requested Memory :                     4000.00 MB
+    Delta Memory :                               3460.00 MB
+    Max Swap :                                   -
+    Max Processes :                              4
+    Max Threads :                                5
+    Run time :                                   5 sec.
+    Turnaround time :                            7 sec.
+
+The output (if any) follows:
+
+/usr/lib64/python2.7/site-packages/matplotlib/__init__.py:1005: UserWarning:  This call to matplotlib.use() has no effect
+because the the backend has already been chosen;
+matplotlib.use() must be called *before* pylab, matplotlib.pyplot,
+or matplotlib.backends is imported for the first time.
+
+  warnings.warn(_use_error_msg)
+
+fname_inputs in run_mapmaker.py
+/group/cmb/litebird/usr/tmatsumu/LB_SYSPL_v6.0//SimedMaps/RunLog/20220131_hoshino_example001/input_npy/inputs_0.npy
+
+option_silent Y
+
+sim
+[maps_init] npix 3145728
+[boreptg2pixptg_inC] the number of for-loop-> 86400
+[boreptg2pixptg_inC] the number of for-loop-> 86400
+
+________________________________________
+[MAIN_MAPMAKER] before signalgen...
+     module name: lib_mapmaker
+  parent process: 159319
+      process id: 159320
+        run time: 4.51553487778
+________________________________________
+
+
+________________________________________
+[MAIN_MAPMAKER] after signalgen...
+     module name: lib_mapmaker
+  parent process: 159319
+      process id: 159320
+        run time: 4.53915691376
+________________________________________
+
+[boreptg2pixptg_inC] the number of for-loop-> 86400
+[boreptg2pixptg_inC] the number of for-loop-> 86400
+
+________________________________________
+[MAIN_MAPMAKER] before signalgen...
+     module name: lib_mapmaker
+  parent process: 159319
+      process id: 159320
+        run time: 5.21148705482
+________________________________________
+
+
+________________________________________
+[MAIN_MAPMAKER] after signalgen...
+     module name: lib_mapmaker
+  parent process: 159319
+      process id: 159320
+        run time: 5.23403191566
+________________________________________
+
+[boreptg2pixptg_inC] the number of for-loop-> 86400
+[boreptg2pixptg_inC] the number of for-loop-> 86400
+
+________________________________________
+[MAIN_MAPMAKER] before signalgen...
+     module name: lib_mapmaker
+  parent process: 159319
+      process id: 159320
+        run time: 5.85046696663
+________________________________________
+
+
+________________________________________
+[MAIN_MAPMAKER] after signalgen...
+     module name: lib_mapmaker
+  parent process: 159319
+      process id: 159320
+        run time: 5.88386201859
+________________________________________
+
+[boreptg2pixptg_inC] the number of for-loop-> 86400
+[boreptg2pixptg_inC] the number of for-loop-> 86400
+
+________________________________________
+[MAIN_MAPMAKER] before signalgen...
+     module name: lib_mapmaker
+  parent process: 159319
+      process id: 159320
+        run time: 6.42858195305
+________________________________________
+
+
+________________________________________
+[MAIN_MAPMAKER] after signalgen...
+     module name: lib_mapmaker
+  parent process: 159319
+      process id: 159320
+        run time: 6.45176386833
+________________________________________
+
+[boreptg2pixptg_inC] the number of for-loop-> 86400
+[boreptg2pixptg_inC] the number of for-loop-> 86400
+
+________________________________________
+[MAIN_MAPMAKER] before signalgen...
+     module name: lib_mapmaker
+  parent process: 159319
+      process id: 159320
+        run time: 7.01475906372
+________________________________________
+
+
+________________________________________
+[MAIN_MAPMAKER] after signalgen...
+     module name: lib_mapmaker
+  parent process: 159319
+      process id: 159320
+        run time: 7.04374694824
+________________________________________
+
+
+________________________________________
+[MAIN_MAPMAKER] END for a scanset...
+     module name: lib_mapmaker
+  parent process: 159319
+      process id: 159320
+        run time: 7.63272595406
+________________________________________
+
+[lib_mapmaker.py] END of main_mapmaker()
+====================================================================================

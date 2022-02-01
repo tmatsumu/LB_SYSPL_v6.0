@@ -1,0 +1,7 @@
+2018-1-16: lib_LBScan.c.bk contains the code which was used to compare with the Guillaume's pointing and also Tomo's pointing script run at the local laptop. 20171128_ScanStrategyCode
+
+
+compile C code by running below:
+> python setup.py build
+
+It should automatically generate the *.o and *.so files under build directory. If there is a same file name in build directory, you need to delete it first before compile.

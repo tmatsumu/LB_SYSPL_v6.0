@@ -1,0 +1,86 @@
+Sender: LSF System <lsfadmin@ccb163>
+Subject: Job 84969214: </home/cmb/tmatsumu/LB_simulation/LB_SYSPL_v6.0/Simulator//RunJob/20220131_hoshino_example001/SH_20220131_hoshino_example001_coadd_map1.sh> in cluster <centralcluster> Done
+
+Job </home/cmb/tmatsumu/LB_simulation/LB_SYSPL_v6.0/Simulator//RunJob/20220131_hoshino_example001/SH_20220131_hoshino_example001_coadd_map1.sh> was submitted from host <ccw05> by user <tmatsumu> in cluster <centralcluster> at Mon Jan 31 20:05:55 2022
+Job was executed on host(s) <ccb163>, in queue <s>, as user <tmatsumu> in cluster <centralcluster> at Mon Jan 31 20:05:56 2022
+</home/cmb/tmatsumu> was used as the home directory.
+</home/cmb/tmatsumu/LB_simulation/LB_SYSPL_v6.0/Simulator/gen_run> was used as the working directory.
+Started at Mon Jan 31 20:05:56 2022
+Terminated at Mon Jan 31 20:06:02 2022
+Results reported at Mon Jan 31 20:06:02 2022
+
+Your job looked like:
+
+------------------------------------------------------------
+# LSBATCH: User input
+/home/cmb/tmatsumu/LB_simulation/LB_SYSPL_v6.0/Simulator//RunJob/20220131_hoshino_example001/SH_20220131_hoshino_example001_coadd_map1.sh
+------------------------------------------------------------
+
+Successfully completed.
+
+Resource usage summary:
+
+    CPU time :                                   2.87 sec.
+    Max Memory :                                 555 MB
+    Average Memory :                             370.00 MB
+    Total Requested Memory :                     4000.00 MB
+    Delta Memory :                               3445.00 MB
+    Max Swap :                                   -
+    Max Processes :                              6
+    Max Threads :                                7
+    Run time :                                   6 sec.
+    Turnaround time :                            7 sec.
+
+The output (if any) follows:
+
+/usr/lib64/python2.7/site-packages/matplotlib/__init__.py:1005: UserWarning:  This call to matplotlib.use() has no effect
+because the the backend has already been chosen;
+matplotlib.use() must be called *before* pylab, matplotlib.pyplot,
+or matplotlib.backends is imported for the first time.
+
+  warnings.warn(_use_error_msg)
+/home/cmb/tmatsumu/LB_simulation/LB_SYSPL_v6.0/Simulator//src/run_coaddmaps.py:105: RuntimeWarning: invalid value encountered in divide
+  mapT = 2.*mapTn_s/mapTd_s
+/home/cmb/tmatsumu/LB_simulation/LB_SYSPL_v6.0/Simulator//src/run_coaddmaps.py:116: RuntimeWarning: divide by zero encountered in divide
+  mapQ = 2./(mapAA_s*mapBB_s-mapAB_s**2) * (mapBB_s*mapAd_s - mapAB_s*mapBd_s)
+/home/cmb/tmatsumu/LB_simulation/LB_SYSPL_v6.0/Simulator//src/run_coaddmaps.py:116: RuntimeWarning: invalid value encountered in multiply
+  mapQ = 2./(mapAA_s*mapBB_s-mapAB_s**2) * (mapBB_s*mapAd_s - mapAB_s*mapBd_s)
+/home/cmb/tmatsumu/LB_simulation/LB_SYSPL_v6.0/Simulator//src/run_coaddmaps.py:117: RuntimeWarning: divide by zero encountered in divide
+  mapU = 2./(mapAA_s*mapBB_s-mapAB_s**2) * (-mapAB_s*mapAd_s + mapAA_s*mapBd_s)
+/home/cmb/tmatsumu/LB_simulation/LB_SYSPL_v6.0/Simulator//src/run_coaddmaps.py:117: RuntimeWarning: invalid value encountered in multiply
+  mapU = 2./(mapAA_s*mapBB_s-mapAB_s**2) * (-mapAB_s*mapAd_s + mapAA_s*mapBd_s)
+/home/cmb/tmatsumu/.local/lib/python2.7/site-packages/healpy/fitsfunc.py:187: FutureWarning: The default dtype of write_map() will change in a future version: explicitly set the dtype if it is important to you
+  category=FutureWarning)
+[Get_Mapmake_Inputs in ReadMapXml.py] /home/cmb/tmatsumu/LB_simulation/LB_SYSPL_v6.0/Simulator//xml/xml_par_20220131_hoshino_example001.xml
+/group/cmb/litebird/usr/tmatsumu/LB_SYSPL_v6.0/DB/sim_nonoise.txt
+/group/cmb/litebird/usr/tmatsumu/LB_SYSPL_v6.0//SimedMaps/RunLog/20220131_hoshino_example001/coadd_map/coadd_map1
+[read_DBmapfilelist] select * from LBSimPtg where id < 2
+
+
++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
+++++++++ START: main_mapcombiner.py +++++++++++++++++++++++++++++++++++++++
+6.91413879395e-06
+False
+1
+[MAIN_MAPCOMBINER]:  0 /group/cmb/litebird/usr/tmatsumu/LB_SYSPL_v6.0//SimedMaps/RunLog/20220131_hoshino_example001/day0/ 0 / 1
+/group/cmb/litebird/usr/tmatsumu/LB_SYSPL_v6.0//SimedMaps/RunLog/20220131_hoshino_example001/day0//map_all.npz
+mapT ,n,d, nd [  0.           0.           0.         ...   0.         -48.18328939
+ -62.12323196] [0. 0. 0. ... 0. 2. 3.] [         nan          nan          nan ...          nan -48.18328939
+ -41.41548798]
+Traceback (most recent call last):
+  File "/home/cmb/tmatsumu/LB_simulation/LB_SYSPL_v6.0/Simulator//src/run_coaddmaps.py", line 633, in <module>
+    coadd.coadd_maps(path,id)
+  File "/home/cmb/tmatsumu/LB_simulation/LB_SYSPL_v6.0/Simulator//src/run_coaddmaps.py", line 206, in coadd_maps
+    py.savefig(out_dir+'/png/'+dir_coadd+'/mapT.png')
+  File "/usr/lib64/python2.7/site-packages/matplotlib/pyplot.py", line 472, in savefig
+    return fig.savefig(*args, **kwargs)
+  File "/usr/lib64/python2.7/site-packages/matplotlib/figure.py", line 1363, in savefig
+    self.canvas.print_figure(*args, **kwargs)
+  File "/usr/lib64/python2.7/site-packages/matplotlib/backend_bases.py", line 2012, in print_figure
+    print_method = self._get_print_method(format)
+  File "/usr/lib64/python2.7/site-packages/matplotlib/backend_bases.py", line 1953, in _get_print_method
+    '%s.' % (format, ', '.join(formats)))
+ValueError: Format "png" is not supported.
+Supported formats: pdf.
